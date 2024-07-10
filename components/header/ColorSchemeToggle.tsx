@@ -1,41 +1,30 @@
 'use client';
 
 import { ActionIcon, useMantineColorScheme } from '@mantine/core';
-import { IconMoon, IconSun } from '@tabler/icons-react';
+import { IconMoonStars, IconSun } from '@tabler/icons-react';
 import { useEffect, useState } from 'react';
 
 export function ColorSchemeToggle() {
-  const [ theme, setTheme ] = useState<boolean>(true);
+  const [ theme, setTheme ] = useState<string>('dark');
   const { setColorScheme } = useMantineColorScheme();
   useEffect(() => {
-      const t = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      setTheme(t);
-      setColorScheme(t ? 'dark' : 'light');
+      if(window.matchMedia("(prefers-color-scheme: light)").matches) {
+        setColorScheme('light');
+        setTheme('light')
+      }
     }, []
   )
 
   return (
-    theme ? (
-      <ActionIcon
-        mx='sm'
-        variant='default'
-        onClick={() => {
-          setTheme(false);
-          setColorScheme('light')
-        }}>
-        <IconSun />
-      </ActionIcon>
-    ) : (
-      <ActionIcon
-        mx='sm'
-        variant='default'
-        color='white'
-        onClick={() => {
-          setTheme(true);
-          setColorScheme('dark')
-        }}>
-        <IconMoon color='gray' size={18} />
-      </ActionIcon>
-    )
+    <ActionIcon
+      mx='sm'
+      variant='outline'
+      color={theme == 'dark' ? 'yellow' : 'blue'}
+      onClick={() => {
+        setTheme(theme == 'dark' ? 'light' : 'dark');
+        setColorScheme(theme == 'dark' ? 'light' : 'dark')
+      }}>
+      {theme == 'dark' ? <IconSun size={18} /> : <IconMoonStars size={18} />}
+    </ActionIcon>
   );
 }

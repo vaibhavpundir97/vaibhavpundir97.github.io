@@ -21,6 +21,7 @@ import {
   IconMongodb,
   IconDocker,
   IconJs,
+  IconSwift,
 } from "./svg/svg";
 
 export const ICONS: { [key: string]: any } = {
@@ -42,6 +43,7 @@ export const ICONS: { [key: string]: any } = {
   kubernetes: IconKube,
   pytorch: IconPytorch,
   tensorflow: IconTensorflow,
+  swift: IconSwift,
 }
 
 export const TECHNOLOGIES: { [key: string]: string } = {
@@ -62,7 +64,8 @@ export const TECHNOLOGIES: { [key: string]: string } = {
   docker: 'Docker',
   ansible: 'Ansible',
   kubernetes: 'Kubernetes',
-  js: 'JavaScript'
+  js: 'JavaScript',
+  swift: 'Swift',
 }
 
 type TimelineElement = {

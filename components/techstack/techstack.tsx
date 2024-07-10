@@ -31,7 +31,7 @@ export function TechStack() {
       <Group justify="space-between">
         <Text fw={500}>Tech Stack</Text>
       </Group>
-      <SimpleGrid cols={6} mt="md">
+      <SimpleGrid cols={7} mt="md">
         {items}
       </SimpleGrid>
     </Card>

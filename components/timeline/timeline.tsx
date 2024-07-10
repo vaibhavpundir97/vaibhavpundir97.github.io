@@ -1,4 +1,6 @@
-import { ActionIcon, Paper, Text, Tooltip } from "@mantine/core";
+"use client"
+
+import { ActionIcon, Paper, Text, Tooltip, useMantineContext, useMantineTheme } from "@mantine/core";
 import { TIMELINE_ELEMENTS } from "@/components/data";
 import './timeline.css';
 import { IconInfoCircle } from "@tabler/icons-react";
@@ -27,34 +29,37 @@ export function Timeline({ defaultColor }: { defaultColor: string }) {
               <div
                 className={
                   `${element.direction === 'left' ? 'visible': 'invisible'}
-                  ${color} h-1 w-12 translate-y-5 opacity-30`
+                  ${color} h-1 w-12 translate-y-[1.875rem] opacity-30`
                 }
               />
               {
                 element.id !== TIMELINE_ELEMENTS[TIMELINE_ELEMENTS.length - 1].id &&
-                  <div className={`${color} w-1 h-full translate-x-9 translate-y-10 opacity-30`} />
+                  <div className={`${color} w-1 h-full translate-x-[1.875rem] translate-y-10 opacity-30`} />
               }
               <ActionIcon
                 variant="gradient"
                 gradient={{from: 'violet', to: 'cyan', deg: 90}}
                 size='64'
+                className="-translate-x-1"
               >
                 <element.icon className={`p-1 rounded-lg z-20`} width={56} height={56} />
               </ActionIcon>
               <div
                 className={
                   `${element.direction === 'right' ? 'visible': 'invisible'}
-                  ${color} h-1 w-12 translate-y-5 opacity-30`
+                  ${color} h-1 w-12 -translate-x-1 translate-y-[1.875rem] opacity-30`
                 }
               />
               {/* <div
                 className={`${color} w-px h-full translate-x-5 translate-y-10 opacity-30`}
               ></div> */}
             </div>
-            <TimelineItem
-              element={element}
-              visibility={element.direction === 'right' ? 'visible': 'invisible'}
-            />
+            <div className="-translate-x-1">
+              <TimelineItem
+                element={element}
+                visibility={element.direction === 'right' ? 'visible': 'invisible'}
+              />
+            </div>
           </div>
         );
       })}
@@ -64,8 +69,15 @@ export function Timeline({ defaultColor }: { defaultColor: string }) {
 
 function TimelineItem({ element, visibility }: { element: any, visibility: string }) {
 
+  // const theme = useMantineTheme();
+  // const { colorScheme } = useMantineContext();
+  // console.log(colorScheme == 'dark' ? theme.colors.gray[9] : theme.colors.indigo[0])
+
   return (
-    <Paper className={`${visibility} border border-gray-600 rounded-lg px-8 py-4 w-full text-center z-10 sm:w-96`}>
+    <Paper
+      // style={{backgroundColor: colorScheme == 'dark' ? theme.colors.gray[9] : theme.colors.indigo[0]}}
+      className={`${visibility} border border-gray-600 rounded-lg px-8 py-4 w-full text-center z-10 sm:w-96`}
+    >
       <Text lh={1.1} size='xl'>
         {element.title}
       </Text>
@@ -73,7 +85,7 @@ function TimelineItem({ element, visibility }: { element: any, visibility: strin
       <Text size="sm">{element.location}</Text>
       <Text size="xs">{element.date}</Text>
       {/* <div className="mb-4 text-left">{element.description}</div> */}
-      <Paper my='md' className="flex flex-wrap justify-center">
+      <Paper style={{background: 'inherit'}} my='md' className="flex flex-wrap justify-center">
         {element.tech.map((tech: any, index: string) => {
           return (
             <Tooltip key={`${index}`} label={tech.name}>
