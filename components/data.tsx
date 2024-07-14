@@ -22,6 +22,7 @@ import {
   IconDocker,
   IconJs,
   IconSwift,
+  IconJenkins,
 } from "./svg/svg";
 
 export const ICONS: { [key: string]: any } = {
@@ -44,6 +45,7 @@ export const ICONS: { [key: string]: any } = {
   pytorch: IconPytorch,
   tensorflow: IconTensorflow,
   swift: IconSwift,
+  jenkins: IconJenkins
 }
 
 export const TECHNOLOGIES: { [key: string]: string } = {
@@ -66,6 +68,7 @@ export const TECHNOLOGIES: { [key: string]: string } = {
   kubernetes: 'Kubernetes',
   js: 'JavaScript',
   swift: 'Swift',
+  jenkins: 'Jenkins'
 }
 
 type TimelineElement = {
@@ -142,7 +145,8 @@ export const TIMELINE_ELEMENTS: TimelineElement[] = [
       "node",
       "react",
       "sql",
-      "git"
+      "git",
+      "jenkins"
     ].map(tech => ({
       name: TECHNOLOGIES[tech],
       icon: ICONS[tech]
