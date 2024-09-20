@@ -54,7 +54,7 @@ export function PDF() {
               <Text ml='xs' span>Texas A&M University</Text>
               <Text span style={{float: 'right'}}>Expected 2025</Text>
               <Text>
-                Relevant Coursework: Information Storage & Retrieval, Deep Learning, and Distributed Processing Systems.
+                Relevant Coursework: Information Storage & Retrieval, Parallel Computing, Distributed Systems, and Data Analytics.
               </Text>
               <Text fw={700} span>Bachelor of Computer Science,</Text>
               <Text ml='xs' span>PES University</Text>
@@ -69,7 +69,7 @@ export function PDF() {
                 </Grid.Col>
                 <Grid.Col span={9}>
                   <Text>
-                    Python, Java, C++, C, Bash, PyTorch, Tensorflow, Node JS, React JS, Next JS, SQL, MongoDB, Docker, Kubernetes, Ansible, Hadoop, Git
+                    Python, Java, Swift, C++, C, Bash, PHP, PyTorch, Tensorflow, Node JS, React JS, Next JS, SQL, MongoDB, Docker, Kubernetes, Ansible, Apache Hadoop, Git, WordPress, Jenkins
                   </Text>
                 </Grid.Col>
                 <Grid.Col span={3}>
@@ -87,8 +87,26 @@ export function PDF() {
               <Divider mb='xs' />
               <div>
                 <div>
+                  <Text fw={700} span>Student Web Developer</Text>
+                  <Text style={{float: 'right'}}>May 2024 - Present</Text>
+                </div>
+                <div>
+                  <Text span>Texas A&M Univerisity College of Veterinary Medicine & Biomedical Sciences</Text>
+                  <Text fs="italic" style={{float: 'right'}}>College Station, TX</Text>
+                </div>
+                <List ml="lg">
+                  <List.Item>
+                    Helping maintain various multi-sited websites using <Text span fw={600}>WordPress</Text> Content Management System.
+                  </List.Item>
+                  <List.Item>
+                    Using tools like <Text span fw={600}>SiteImprove</Text> and <Text span fw={600}>Google Analytics</Text> to monitor & fix Usability, Accessibility, QA, and SEO issues.
+                  </List.Item>
+                </List>
+              </div>
+              <div style={{margin: '8px 0'}}>
+                <div>
                   <Text fw={700} span>Machine Learning Engineer</Text>
-                  <Text style={{float: 'right'}}>May 2024 - PRESENT</Text>
+                  <Text style={{float: 'right'}}>May 2024 - Aug 2024</Text>
                 </div>
                 <div>
                   <Text span>BrainBit AI</Text>
@@ -96,10 +114,13 @@ export function PDF() {
                 </div>
                 <List ml="lg">
                   <List.Item>
-                    Built a comprehensive dataset of text-audio pairs for drum sounds, encompassing 100K+ samples, to train the diffusion models.
+                    Designed novel generative diffusion models using <Text span fw={600}>PyTorch</Text> for synthesizing realistic drum sounds from text prompts.
                   </List.Item>
                   <List.Item>
-                    Developed state-of-the-art diffusion models for generating realistic drum sounds from text prompts.
+                    Developed and optimized <Text span fw={600}>search algorithms</Text> to improve the retrieval of relevant drum sound samples from the dataset, enhancing the accuracy and speed of sound matching based on user input.
+                  </List.Item>
+                  <List.Item>
+                    Built a comprehensive <Text span fw={600}>300K+</Text> sample text-audio dataset for drum sounds using <Text span fw={600}>Gemini</Text> and <Text span fw={600}>TogetherAI</Text>.
                   </List.Item>
                 </List>
               </div>
@@ -114,17 +135,23 @@ export function PDF() {
                 </div>
                 <List ml="lg">
                   <List.Item>
-                    Spearheaded full-stack web development projects using React, Node.js, and Python, deployed via Docker containers, which enhanced UI/UX and resulted in a 40% increase in user engagement.
+                    Led full-stack web development projects using <Text span fw={600}>React</Text>, <Text span fw={600}>Node.js</Text>, and <Text span fw={600}>Python</Text>, deploying via <Text span fw={600}>Docker</Text> and <Text span fw={600}>Kubernetes</Text>, improving user engagement by <Text span fw={600}>40%</Text> and supporting high-traffic search queries.
                   </List.Item>
                   <List.Item>
-                    Facilitated training for 3 new hires over 6 months, providing continuous guidance, mentorship on best practices, and constructive feedback to ensure their successful integration into the team.
+                    Engineered a comprehensive unit test framework in <Text span fw={600}>Python</Text>, reducing testing cycle time by <Text span fw={600}>60%</Text>, significantly enhancing developer efficiency across multiple teams.
                   </List.Item>
                   <List.Item>
-                    Engineered a comprehensive unit test framework in Python, reducing testing cycle time by 60%, significantly enhancing developer efficiency across multiple teams.
+                    Developed and automated a robust <Text span fw={600}>CI/CD</Text> pipeline using <Text span fw={600}>Jenkins</Text>, <Text span fw={600}>Docker</Text>, and <Text span fw={600}>GitLab</Text>, reducing deployment time by <Text span fw={600}>30%</Text> and enhancing release frequency in an <Text span fw={600}>agile</Text> environment.
+                  </List.Item>
+                  <List.Item>
+                    Maintained and expanded automated unit test frameworks, contributing to <Text span fw={600}>25%</Text> reduced testing time and ensuring robust <Text span fw={600}>QA</Text> for production-ready deployments.
+                  </List.Item>
+                  <List.Item>
+                    Leveraged <Text span fw={600}>deep learning</Text> and <Text span fw={600}>natural language processing</Text> (NLP) to analyze <Text span fw={600}>Bugzilla</Text> data & exception’s traceback, automating the bug assignment process with an accuracy of <Text span fw={600}>96%</Text>.
                   </List.Item>
                 </List>
               </div>
-              <div style={{margin: '8px 0'}}>
+              {/* <div style={{margin: '8px 0'}}>
                 <div>
                   <Text fw={700} span>Software Engineering Intern</Text>
                   <Text style={{float: 'right'}}>Jun 2019 - Jul 2019</Text>
@@ -141,7 +168,7 @@ export function PDF() {
                     Engineered an ML model for text summarization, resulting in a 15% improvement in accuracy.
                   </List.Item>
                 </List>
-              </div>
+              </div> */}
             </Paper>
             <Paper my="md">
               <Title order={3}>PROJECTS</Title>
@@ -149,19 +176,32 @@ export function PDF() {
               <Text fw={700}>Outfit Recommendation System</Text>
               <List ml="lg">
                 <List.Item>
-                  Utilized the Deep Fashion dataset of over 800K diverse fashion images to construct an outfit recommendation system.
+                  Implemented a VBPR model trained on the Deep Fashion dataset of over <Text span fw={600}>800K+</Text> diverse fashion images to build a highly personalized outfit <Text span fw={600}>recommendation system</Text>.
                 </List.Item>
                 <List.Item>
-                  Developed a VBPR model to personalize recommendations using implicit user feedback and integrated chatGPT for weather-based enhancements.
+                  Designed and developed an intuitive, responsive user interface in <Text span fw={600}>Next.js</Text> to deliver tailored outfit suggestions, seamlessly integrating real-time weather data for enhanced user experience.
                 </List.Item>
               </List>
               <Text fw={700}>Tiny Social Network Service</Text>
               <List ml="lg">
                 <List.Item>
-                  Built a highly available, scalable, and fault-tolerant social network service using Google RPC in C++.
+                  Built a highly available, scalable, and fault-tolerant social network service using <Text span fw={600}>Google RPC</Text> in <Text span fw={600}>C++</Text>.
+                </List.Item>
+                <List.Item>
+                  Orchestrated <Text span fw={600}>coordination</Text> and <Text span fw={600}>synchronization</Text> across multiple clusters and servers.
                 </List.Item>
               </List>
-              <Text fw={700}>Motion Deblurring using Deep Learning</Text>
+              <Text fw={700}>A Web Application ‘SelfieLessActs’ on AWS EC2 Cloud Platform</Text>
+              <List ml="lg">
+                <List.Item>
+                  Developed a container orchestration system on <Text span fw={600}>AWS EC2</Text> (IaaS), ensuring fault tolerance, load balancing, and autoscaling.
+                </List.Item>
+                <List.Item>
+                  Supported <Text span fw={600}>microservices</Text> for the web application, enhancing its reliability and scalability.
+                </List.Item>
+              </List>
+            </Paper>
+              {/* <Text fw={700}>Motion Deblurring using Deep Learning</Text>
               <List ml="lg">
                 <List.Item>
                   Created a machine learning model in Tensorflow employing Bottleneck Residual Blocks and Gated Fusion Network.
@@ -170,7 +210,7 @@ export function PDF() {
                   Achieved a PSNR value of 27.11 with just 8.6 million parameters effectively removing motion-induced blur from images.
                 </List.Item>
               </List>
-            </Paper>
+            </Paper> */}
             <Paper my="md">
               <Title order={3}>EXTRA-CURRICULAR ACTIVITIES</Title>
               <Divider mb='xs' />
@@ -185,7 +225,7 @@ export function PDF() {
               <Divider mb='xs' />
               <List ml="lg">
                 <List.Item>
-                  Led a team of 6 members to achieve 1st Runner-up in Smart India Hackathon 2019 (Software Edition), outperforming 30+ competing teams nationwide.
+                  Led a team of 6 members to achieve <Text span fw={600}>1st Runner-up</Text> in Smart India Hackathon 2019 (Software Edition), outperforming 30+ competing teams nationwide.
                 </List.Item>
               </List>
             </Paper>
