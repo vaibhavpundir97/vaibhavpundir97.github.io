@@ -54,7 +54,7 @@ export function PDF() {
               <Text ml='xs' span>Texas A&M University</Text>
               <Text span style={{float: 'right'}}>Expected 2025</Text>
               <Text>
-                Relevant Coursework: Information Storage & Retrieval, Parallel Computing, Distributed Systems, and Data Analytics.
+                Relevant Coursework: Information Storage & Retrieval, Parallel Computing, Distributed Systems, Deep Learning and Data Analytics.
               </Text>
               <Text fw={700} span>Bachelor of Computer Science,</Text>
               <Text ml='xs' span>PES University</Text>
@@ -64,18 +64,42 @@ export function PDF() {
               <Title order={3}>SKILLS</Title>
               <Divider mb='xs' />
               <Grid>
-                <Grid.Col span={3}>
-                  <Text fw={700}>Technical Skills</Text>
+                <Grid.Col pb='2px' span={3}>
+                  <Text fw={700}>Languages & Databases</Text>
                 </Grid.Col>
-                <Grid.Col span={9}>
+                <Grid.Col pb='2px' span={9}>
                   <Text>
-                    Python, Java, Swift, C++, C, Bash, PHP, PyTorch, Tensorflow, Node JS, React JS, Next JS, SQL, MongoDB, Docker, Kubernetes, Ansible, Apache Hadoop, Git, WordPress, Jenkins
+                    Python, C++, C, Java, Swift, Bash, SQL, MongoDB
                   </Text>
                 </Grid.Col>
-                <Grid.Col span={3}>
+                <Grid.Col py='2px' span={3}>
+                  <Text fw={700}>Web Development</Text>
+                </Grid.Col>
+                <Grid.Col py='2px' span={9}>
+                  <Text>
+                    Node.js, React.js, Next.js, WordPress, PHP
+                  </Text>
+                </Grid.Col>
+                <Grid.Col py='2px' span={3}>
+                  <Text fw={700}>ML & Big Data</Text>
+                </Grid.Col>
+                <Grid.Col py='2px' span={9}>
+                  <Text>
+                    PyTorch, TensorFlow, Apache Hadoop
+                  </Text>
+                </Grid.Col>
+                <Grid.Col py='2px' span={3}>
+                  <Text fw={700}>DevOps & Tools</Text>
+                </Grid.Col>
+                <Grid.Col py='2px' span={9}>
+                  <Text>
+                    Docker, Kubernetes, Ansible, Jenkins, Git
+                  </Text>
+                </Grid.Col>
+                <Grid.Col py='2px' span={3}>
                   <Text fw={700}>Soft Skills</Text>
                 </Grid.Col>
-                <Grid.Col span={9}>
+                <Grid.Col py='2px' span={9}>
                   <Text>
                     Problem-solving, Attention to detail, Teamwork, Adaptability
                   </Text>

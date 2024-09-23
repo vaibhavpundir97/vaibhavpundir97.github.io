@@ -23,6 +23,7 @@ import {
   IconJs,
   IconSwift,
   IconJenkins,
+  IconWordpress,
 } from "./svg/svg";
 
 export const ICONS: { [key: string]: any } = {
@@ -45,7 +46,8 @@ export const ICONS: { [key: string]: any } = {
   pytorch: IconPytorch,
   tensorflow: IconTensorflow,
   swift: IconSwift,
-  jenkins: IconJenkins
+  jenkins: IconJenkins,
+  wordpress: IconWordpress
 }
 
 export const TECHNOLOGIES: { [key: string]: string } = {
@@ -68,7 +70,8 @@ export const TECHNOLOGIES: { [key: string]: string } = {
   kubernetes: 'Kubernetes',
   js: 'JavaScript',
   swift: 'Swift',
-  jenkins: 'Jenkins'
+  jenkins: 'Jenkins',
+  wordpress: 'WordPress'
 }
 
 type TimelineElement = {
