@@ -1,9 +1,8 @@
 "use client"
 
-import { Group, ActionIcon } from '@mantine/core';
-import { Avatar } from '@mantine/core';
+import { Group, ActionIcon, Text } from '@mantine/core';
 import classes from './header.module.css';
-import { IconBrandGithubFilled, IconBrandLinkedin } from '@tabler/icons-react';
+import { IconBrandLinkedin } from '@tabler/icons-react';
 import { ColorSchemeToggle } from './ColorSchemeToggle';
 import { IconGithub } from '../svg/svg';
 
@@ -30,14 +29,17 @@ export function Header() {
     <header className={classes.header}>
       <div className={classes.inner}>
         <Group>
-          <Avatar
+          {/* <Avatar
             component='a'
             href='https://vaibhavpundir97.github.io'
             color="violet"
             radius="xl"
           >
-            VP
-          </Avatar>
+            {'<VP />'}
+          </Avatar> */}
+          <a className={classes.link} href='https://vaibhavpundir97.vercel.app/'>
+            <Text fw={600}>{'<VP />'}</Text>
+          </a>
         </Group>
 
         <Group>

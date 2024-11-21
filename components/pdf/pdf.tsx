@@ -41,10 +41,10 @@ export function PDF() {
               </Anchor>
               <IconDiamonds style={{margin: '0 8px'}} size={10} />
               <Anchor
-                href="https://vaibhavpundir97.github.io"
+                href="https://vaibhavpundir97.vercel.app/"
                 target="_blank"
               >
-                vaibhavpundir97.github.io
+                vaibhavpundir97.vercel.app
               </Anchor>
             </Center>
             <Paper my="md">
