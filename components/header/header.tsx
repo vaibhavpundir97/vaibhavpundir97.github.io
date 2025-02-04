@@ -1,10 +1,10 @@
 "use client"
 
-import { Group, ActionIcon, Text } from '@mantine/core';
+import { Group, ActionIcon, Text, useMantineColorScheme } from '@mantine/core';
 import classes from './header.module.css';
 import { IconBrandLinkedin } from '@tabler/icons-react';
-import { ColorSchemeToggle } from './ColorSchemeToggle';
 import { IconGithub } from '../svg/svg';
+import { useEffect } from 'react';
 
 const links = [
   { link: '/', label: 'Home' },
@@ -14,6 +14,12 @@ const links = [
 ];
 
 export function Header() {
+
+  const { setColorScheme } = useMantineColorScheme();
+  useEffect(() => {
+      setColorScheme('dark');
+    }, []
+  )
 
   const items = links.map((link) => (
     <a
@@ -29,14 +35,6 @@ export function Header() {
     <header className={classes.header}>
       <div className={classes.inner}>
         <Group>
-          {/* <Avatar
-            component='a'
-            href='https://vaibhavpundir97.github.io'
-            color="violet"
-            radius="xl"
-          >
-            {'<VP />'}
-          </Avatar> */}
           <a className={classes.link} href='https://vaibhavpundir97.vercel.app/'>
             <Text fw={600}>{'<VP />'}</Text>
           </a>
@@ -65,7 +63,7 @@ export function Header() {
             >
               <IconBrandLinkedin />
             </ActionIcon>
-            <ColorSchemeToggle />
+            {/* <ColorSchemeToggle /> */}
           </Group>
         </Group>
 
